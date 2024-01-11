@@ -1,7 +1,12 @@
 import { useState } from "react";
+import InputTodo from "./components/InputTodo";
 function App() {
   const [description, setDescription] = useState("");
-  return <div>Hello World</div>;
+  return (
+    <>
+      <InputTodo />
+    </>
+  );
 }
 
 export default App;
