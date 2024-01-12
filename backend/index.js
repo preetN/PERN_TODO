@@ -8,7 +8,9 @@ app.use(cors());
 app.use(express.json());
 
 //Routes
-
+app.get("/", (req, res) => {
+  res.json("HEllo there");
+});
 //Create
 app.post("/todos", async (req, res) => {
   try {
