@@ -1,10 +1,10 @@
-import { useState } from "react";
 import InputTodo from "./components/InputTodo";
+import ListTodo from "./components/ListTodo";
 function App() {
-  const [description, setDescription] = useState("");
   return (
     <>
       <InputTodo />
+      <ListTodo />
     </>
   );
 }

@@ -1,9 +1,10 @@
 const express = require("express");
 const app = express();
-const port = 3001;
+const port = 5000;
 const pool = require("./dbModel");
-
+const cors = require("cors");
 //middleware
+app.use(cors());
 app.use(express.json());
 
 //Routes
@@ -23,7 +24,7 @@ app.post("/todos", async (req, res) => {
 });
 
 //get
-app.get("/", async (req, res) => {
+app.get("/todos", async (req, res) => {
   try {
     const allTodos = await pool.query("SELECT * FROM todo");
     res.json(allTodos.rows);
